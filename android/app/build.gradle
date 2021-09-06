@@ -49,6 +49,7 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        resValue "string", "build_config_package", "com.vn.flutter_app_flavor"
     }
 
     buildTypes {
@@ -68,12 +69,18 @@ android {
     productFlavors {
         develop {
             dimension "flavors"
+            applicationIdSuffix ".dev"
+            manifestPlaceholders = [appName: "[DEV] example_with_flavors"]
         }
         staging {
             dimension "flavors"
+            applicationIdSuffix ".stg"
+            manifestPlaceholders = [appName: "[STG] example_with_flavors"]
         }
         production {
             dimension "flavors"
+            applicationIdSuffix ""
+            manifestPlaceholders = [appName: "example_with_flavors"]
         }
     }
 }
