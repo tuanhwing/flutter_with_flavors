@@ -28,6 +28,8 @@ Instead of hardcoding these values into variables and building an app for every 
 dependencies:
     flutter_config: 2.0.0
     flutter_launcher_icons: 0.9.2
+    
+    ///Demo different Firease project per flavor
     firebase_core: 1.6.0
     firebase_messaging: 10.0.6
 ```
